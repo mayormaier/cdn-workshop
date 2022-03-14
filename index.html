@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN Workshop</title>
+    <link
+    rel="stylesheet"
+    href="https://shoelace-mayormaier.vercel.app/themes/dark.css"
+    onload="document.documentElement.classList.add('sl-theme-dark');"
+    />
+    <link rel="stylesheet" href="base-style.css">
+    <script type="module" src="https://shoelace-mayormaier.vercel.app/shoelace.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to <a href="https://github.com/mayormaier/shoelace">mayormaier's shoelace distribution</a></h1>
+
+        <div class="container-item">
+            <h2>Shoelace Button</h2>
+            <sl-button size="small">Click me</sl-button>
+        </div>
+        
+        <div class="container-item">
+            <h2>Shoelace Color Picker</h2>
+            <sl-color-picker></sl-color-picker>
+            <script>
+            const colorPicker = document.querySelector('sl-color-picker');
+            colorPicker.swatches = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+            </script>
+        </div>
+        
+        <div class="container-item">
+            <h2>Shoelace Checkbox</h2>
+            <sl-checkbox>Check me</sl-checkbox>
+            <script>
+            const checkbox = document.querySelector('sl-checkbox');
+            checkbox.addEventListener('sl-change', event => {
+                console.log(event.target.checked ? 'checked' : 'not checked');
+            });
+            </script>
+        </div>
+        
+    </div>
+</body>
+</html>
