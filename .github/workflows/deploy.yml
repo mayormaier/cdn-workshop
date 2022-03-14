@@ -16,7 +16,7 @@ jobs:
           mkdir build
           cp index.html ./build
           cp base-style.css ./build
-          cp ./in-the-future/index.html ./build/in-the-future/index.html
+          cp -r ./in-the-future/index.html ./build/in-the-future/index.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
